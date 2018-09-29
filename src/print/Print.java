@@ -1,5 +1,8 @@
 package print;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Print {
     public static void Pln(){
         System.out.println();
@@ -16,6 +19,12 @@ public class Print {
         Pln();
     }
 
+    public static void P(int[] ary){
+        for(int x:ary){
+            System.out.print(x+" ");
+        }
+    }
+
     public static void Pln(char[] ary){
         for(char x:ary){
             System.out.print(x+" ");
@@ -23,14 +32,18 @@ public class Print {
         Pln();
     }
 
-//    public static <T> void Pln(T[] t){
-//        for(T x: t){
-//            System.out.print(x+" ");
-//        }
-//        Pln();
-//    }
+    public static void P(char[] ary){
+        for(char x:ary){
+            System.out.print(x+" ");
+        }
+    }
 
     public static <T extends Comparable> void Pln(T... t){
+        /*
+        public static <T extends Comparable> void Pln(T... t){}
+        等效于：
+        public static <T extends Comparable> void Pln(T[] t) {}
+         */
         for(T x: t){
             System.out.print(x+" ");
         }
